@@ -1,0 +1,43 @@
+{
+  "skill_name": "humiliate-me",
+  "evals": [
+    {
+      "id": 0,
+      "prompt": "我想做一个 Chrome extension：用户打开 YouTube 视频时，插件自动抓 transcript，总结成 Notion 笔记。我怀疑我没说清楚，你先别写代码，像苏格拉底一样追问我，帮我把需求打磨到能实现。",
+      "expected_output": "Asks Socratic clarifying questions instead of coding; identifies missing user, scope, permissions, edge cases, dependencies, and minimum spec before implementation.",
+      "files": [],
+      "expectations": [
+        "The response is in Chinese and does not start implementing or writing code.",
+        "The response asks Socratic clarifying questions before giving a solution, with questions about user, success criteria, scope, dependencies, edge cases, and minimum viable version.",
+        "The response explicitly calls out missing implementation-critical decisions such as transcript access, Notion authorization, permissions, failure handling, or data ownership.",
+        "The response ends with a compact minimum spec or top three questions to answer before coding."
+      ]
+    },
+    {
+      "id": 1,
+      "prompt": "我准备给一个 200 人公司内部用的报表工具上 Redis、Kafka、向量数据库、微服务和 Kubernetes。请给这个技术方案一次极不友好、一点情绪价值都不给的 review：我有哪 3 个隐含假设没确认？哪里过度工程？",
+      "expected_output": "Provides a blunt technical plan review with exactly or clearly at least three unconfirmed assumptions, overengineering critique, likely failure modes, simpler alternative, and kill criteria.",
+      "files": [],
+      "expectations": [
+        "The response gives a blunt verdict without reassurance or generic praise.",
+        "The response lists three unconfirmed assumptions that could invalidate the technical plan.",
+        "The response specifically critiques Redis, Kafka, vector database, microservices, and Kubernetes as likely overengineering for a 200-person internal reporting tool unless evidence justifies them.",
+        "The response includes likely failure modes plus a simpler alternative architecture.",
+        "The response includes kill criteria or evidence that should make the user abandon or revise the plan."
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "我想做一个 AI accountability app，帮自由职业者每天打卡、自动拆任务、每月 19 美元。我觉得市场很大，因为大家都拖延。请扮演一个刚听完我竞争对手路演、已经对我有偏见的投资人，说出你最不想投我的 3 个理由；再指出我自以为是的优势里最经不起推敲的那个。",
+      "expected_output": "Responds as a skeptical investor, gives three reasons not to invest, identifies the weakest claimed advantage, tests customer pain and pricing risk, and names evidence that would change the critique.",
+      "files": [],
+      "expectations": [
+        "The response adopts a skeptical investor perspective rather than a friendly brainstorming tone.",
+        "The response gives three concrete reasons not to invest.",
+        "The response identifies the weakest claimed advantage or most fragile self-belief in the user's pitch.",
+        "The response discusses customer pain, willingness to pay, retention, distribution, or switching behavior.",
+        "The response critiques the $19/month pricing and names evidence that would change the investor's mind."
+      ]
+    }
+  ]
+}
